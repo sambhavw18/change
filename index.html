@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .main{
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="chnge">
+    <button onclick="changec()" id="center">Change Color</button>
+    </div>
+</body>
+<script>
+    var colorarr=['blue','green','pink','red','yellow','orange','skyblue','purple']
+    function changec() {
+        // console.log(Math.floor(Math.random()*colorarr.length))
+        newcolor=colorarr[(Math.floor(Math.random() * colorarr.length))]
+        var get=document.getElementById('chnge')
+        get.style.backgroundColor=newcolor
+    }
+</script>
+</html>
